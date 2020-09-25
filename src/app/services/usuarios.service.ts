@@ -11,21 +11,16 @@ export class UsuariosService {
 
 getUsers = () => {
 
-const headers = new HttpHeaders({
-  'token-usuario': '29837291873982737987JSAKSJDAS'
-});
+
 const params = new HttpParams().append('page', '2');
-return this.http.get(`https://reqres.in/api/user`, {params, headers}
+return this.http.get(`https://reqres.in/api/user`, {
+  params,
+}
 ).pipe(
   map( resp => resp ['data'] ),
-  catchError(this.manejarError)
 );
 }
 
 
-manejarError = (error: HttpErrorResponse) => {
-  console.log('sucedio un error');
-  console.warn(error);
-  return throwError('error personalizado');
-}
+
 }
