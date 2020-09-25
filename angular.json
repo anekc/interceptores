@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Interceptores"
+    }
+  },
+  "defaultProject": "Interceptores",
+  "cli": {
+    "analytics": "1b541dec-baf5-438e-b2b1-97dcd0fa1160"
+  }
 }
